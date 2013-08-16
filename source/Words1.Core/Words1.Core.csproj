@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{77AAD70A-315B-42EC-897F-00C50461C734}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Words1.Core</RootNamespace>
+    <AssemblyName>Words1.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <OutputPath>..\..\bin\$(Configuration)\</OutputPath>
+    <StyleCopTreatErrorsAsWarnings>false</StyleCopTreatErrorsAsWarnings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BackgroundTaskGroup.cs" />
+    <Compile Include="CancellableWorkerTask.cs" />
+    <Compile Include="BlockWriter.cs" />
+    <Compile Include="CrunchedWord3Grid.cs" />
+    <Compile Include="Word3GridCruncher.cs" />
+    <Compile Include="Word3GridFinder.cs" />
+    <Compile Include="Word3Grid.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="TaskChain.cs" />
+    <Compile Include="WorkerTask.cs" />
+    <Compile Include="PeriodicWorker.cs" />
+    <Compile Include="IAsyncWaiter.cs" />
+    <Compile Include="OutputWorker.cs" />
+    <Compile Include="InputData.cs" />
+    <Compile Include="InputWorker.cs" />
+    <Compile Include="Word4GridFinder.cs" />
+    <Compile Include="CrunchedWord4Grid.cs" />
+    <Compile Include="Word4GridCruncher.cs" />
+    <Compile Include="SortedTable.cs" />
+    <Compile Include="Word4GridLoader.cs" />
+    <Compile Include="Word4Grid.cs" />
+    <Compile Include="Word4Trie.cs" />
+    <Compile Include="Word4.cs" />
+    <Compile Include="Word4Loader.cs" />
+    <Compile Include="Word3Loader.cs" />
+    <Compile Include="Word3Trie.cs" />
+    <Compile Include="Word3.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\StyleCop\v4.7\StyleCop.Targets" />
+</Project>
