@@ -39,6 +39,8 @@
     <Compile Include="BackgroundTaskGroupTest.cs" />
     <Compile Include="CancellableWorkerTaskTest.cs" />
     <Compile Include="BlockWriterTest.cs" />
+    <Compile Include="CrunchedWord3GridTest.cs" />
+    <Compile Include="Word2GridCruncherTest.cs" />
     <Compile Include="Word2GridTest.cs" />
     <Compile Include="Word2TrieTest.cs" />
     <Compile Include="Word2Test.cs" />
