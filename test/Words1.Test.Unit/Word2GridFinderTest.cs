@@ -67,6 +67,21 @@ namespace Words1.Test.Unit
         }
 
         [Fact]
+        public void Find_DisallowDuplicatesMismatchOnLastColumnWithSameLetters_DoesNothing()
+        {
+            Word2Trie trie = new Word2Trie();
+            trie.Add(new Word2("aa"));
+            trie.Add(new Word2("ab"));
+            trie.Add(new Word2("ba"));
+            Word2GridFinder finder = new Word2GridFinder(trie, false);
+
+            int count = 0;
+            finder.Find(new Word2("aa"), g => ++count);
+
+            Assert.Equal(0, count);
+        }
+
+        [Fact]
         public void Find_AllowDuplicatesExactlyOneMatchWithTwoWords_ExecutesOnFoundOnce()
         {
             Word2Trie trie = new Word2Trie();

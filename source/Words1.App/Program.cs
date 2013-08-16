@@ -14,7 +14,7 @@ namespace Words1
     {
         private static void Main(string[] args)
         {
-            bool allowDuplicateWords = false;
+            bool allowDuplicateWords = true;
             int workerCount = Environment.ProcessorCount - 1;
             string inputFileName = "words4.txt";
             string outputFileName = "results.txt";
@@ -37,6 +37,8 @@ namespace Words1
 
             switch (gridSize)
             {
+                case 2:
+                    return new Word2GridAlgorithm(logger, writer);
                 case 3:
                     return new Word3GridAlgorithm(logger, writer);
                 case 4:

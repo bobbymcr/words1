@@ -36,9 +36,9 @@ namespace Words1
 
         private void DoRow2(Word2 row2, Word2Grid grid, Action<Word2Grid> onFound)
         {
-            if (this.allowDuplicateWords || (!grid.Row1.Equals(row2) && !grid.Column1.Equals(row2)))
+            grid = new Word2Grid(grid.Row1, row2);
+            if (this.allowDuplicateWords || (!grid.Row1.Equals(row2) && !grid.Column1.Equals(row2) && !grid.Column2.Equals(grid.Row1)))
             {
-                grid = new Word2Grid(grid.Row1, row2);
                 if (this.trie.Contains(grid.Column2))
                 {
                     onFound(grid);

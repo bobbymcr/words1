@@ -35,6 +35,8 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Word2GridWorker.cs" />
+    <Compile Include="Word2GridAlgorithm.cs" />
     <Compile Include="Word4GridAlgorithm.cs" />
     <Compile Include="Word3GridAlgorithm.cs" />
     <Compile Include="GridAlgorithm.cs" />
