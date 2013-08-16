@@ -35,6 +35,7 @@
     <Compile Include="BackgroundTaskGroup.cs" />
     <Compile Include="CancellableWorkerTask.cs" />
     <Compile Include="BlockWriter.cs" />
+    <Compile Include="Word2Grid.cs" />
     <Compile Include="Word2Trie.cs" />
     <Compile Include="Word2.cs" />
     <Compile Include="CrunchedWord3Grid.cs" />
